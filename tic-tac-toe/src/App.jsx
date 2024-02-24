@@ -13,25 +13,33 @@ function App() {
 
   //use state para actualizar el tablero, valor inicial sera un array vacio
   const [board, setBoard] = useState(() =>{
+
     const boardFromStorage = window.localStorage.getItem('board')
     if (boardFromStorage) return JSON.parse(boardFromStorage)
     return Array(9).fill(null)
+
   })
+
   //use state para actualizar el turno, valor inicial sera la X
   const [turn, setTurn] = useState(()=>{
+
     const turnFromStorage = window.localStorage.getItem('turn')
     return turnFromStorage ?? TURNS.x
+
   })
+
   //null no hay ganador, false hay un empate
   const [winner, setWinner] = useState(null)
 
   const resetGame = () => {
+
     setBoard(Array(9).fill(null))
     setTurn(TURNS.x)
     setWinner(null)
 
     window.localStorage.removeItem('board')
     window.localStorage.removeItem('turn')
+
   }
 
 
@@ -93,7 +101,7 @@ function App() {
       </section>
 
       <WinnerModal 
-        resetGame={resetGame} j
+        resetGame={resetGame} 
         winner={winner}
       />
 

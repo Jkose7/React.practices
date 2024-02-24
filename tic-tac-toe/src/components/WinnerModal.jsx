@@ -1,4 +1,5 @@
 import {Square} from './Square.jsx'
+import PropTypes from 'prop-types'
 
 export function WinnerModal({winner, resetGame}) {
 
@@ -22,4 +23,9 @@ export function WinnerModal({winner, resetGame}) {
             </div>
         </section>
     )
+}
+
+WinnerModal.propTypes = {
+    winner: PropTypes.any,
+    resetGame: PropTypes.func
 }

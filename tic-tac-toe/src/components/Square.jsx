@@ -1,4 +1,6 @@
 //creamos componente square
+import PropTypes from 'prop-types'
+
 
 export const Square = ({ children, updateBoard, isSelected, index }) => {
 
@@ -16,4 +18,12 @@ export const Square = ({ children, updateBoard, isSelected, index }) => {
         {children}
       </div>
     )
-  }
+}
+
+Square.propTypes = {
+  children: PropTypes.node,
+  updateBoard: PropTypes.any,
+  isSelected: PropTypes.bool,
+  index: PropTypes.number
+}
+

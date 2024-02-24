@@ -2,7 +2,7 @@
 import {WINNER_COMBOS} from '../constans.js'
 
 
-export const checkWinner = (boardToCheck) => {
+export function checkWinner (boardToCheck){
     for (const combo of WINNER_COMBOS) {
       const [a, b, c] = combo
       if (
