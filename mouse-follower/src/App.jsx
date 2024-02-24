@@ -1,12 +1,13 @@
-//import { useState } from 'react'
 import './App.css'
+import { FollowMouse } from './components/FollowMouse'
 
 function App() {
-
   return (
-    <h3>Mouse Follower</h3>
+    <>
+      <FollowMouse></FollowMouse>
+    </>
   )
-  
+
 }
 
 export default App
