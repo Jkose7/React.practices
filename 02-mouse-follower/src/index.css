@@ -59,3 +59,11 @@ button:hover {
 body.no-cursor {
   cursor: none;
 }
+
+.space-mouse{
+  background-color: #646cff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #646cff;
+  width: 50vw;
+  height: 50vh;
+}

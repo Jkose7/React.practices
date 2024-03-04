@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 
 export function FollowMouse() {
+
     const [enable, setEnable] = useState(false)
+    
     const [position, setPosition] = useState({ x: 0, y: 0 })
     const handleClick = () => {
         setEnable(!enable)
@@ -39,7 +41,7 @@ export function FollowMouse() {
         <main>
             <div style={{
                 position: 'absolute',
-                backgroundColor: '#646cff',
+                backgroundColor: 'rgba(255, 255, 255, 0.87',
                 borderRadius: '50%',
                 opacity: 0.8,
                 boxShadow: '0 0 10px #646cff',
@@ -52,6 +54,10 @@ export function FollowMouse() {
                 transform: `translate(${position.x}px, ${position.y}px)`
             }}
             />
+
+            <div className='space-mouse'>
+                
+            </div>
 
             <h3>Mouse Follower</h3>
             <button onClick={handleClick}>
