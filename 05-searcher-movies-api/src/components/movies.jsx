@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types'
 
+//Componente cuando se reciben las peliculas
 function RenderMovies({movies}){
     return (
         <ul>
         {
           movies.map(movie =>(
-            <li key={movie.imdbID}> 
-              <h3>{movie.Title}</h3>
-              <p>{movie.Year}</p>
-              <img src={movie.Poster} alt={movie.Title} />
+            <li key={movie.id}> 
+              <h3>{movie.title}</h3>
+              <p>{movie.year}</p>
+              <img src={movie.poster} alt={movie.title} />
             </li>
           ))
         }
@@ -16,15 +17,15 @@ function RenderMovies({movies}){
     )
 }
 
-
+//Componente cuando no se recibe ningun resultado
 function RenderNoMovies(){
     return(
         <h1>Not found movies</h1>
     )
 }
 
+//Renderizado condicional dependiendo si recibe o no las peliculas
 export function Movies ({movies}){
-
     const hasMovies = movies?.length > 0
 
     return(
