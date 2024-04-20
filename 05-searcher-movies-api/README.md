@@ -2,7 +2,7 @@
 
 Crea una aplicacion para buscar peliculas 
 
-API a usar: 
+API:
 
 - https://www.omdbapi.com/
 - API_KEY: 9f1bd89e
