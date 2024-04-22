@@ -1,0 +1,27 @@
+.products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products ul {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(250px, 1fr)
+    );
+    gap: 16px;
+}
+
+.products li{
+    display: flex;
+    flex-direction: column;
+}
+
+.products img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+}
