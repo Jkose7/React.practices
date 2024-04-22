@@ -1,13 +1,11 @@
 import { Filters } from "./Filters"
 
-export function Header ({changeFilter}) {
+export function Header() {
     return (
         <header>
             <div>Shopping</div>
             <div>
-                <Filters
-                changeFilter={changeFilter}
-                />
+                <Filters />
             </div>
         </header>
     )

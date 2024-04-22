@@ -1,18 +1,27 @@
-import { useState } from "react"
+import { useId } from "react"
+import { useFilters } from "../hooks/useFilters"
 
-export function Filters({changeFilter}) {
-    const [minPrice, setMinPrice] = useState(0)
 
+export function Filters() {
+
+    //llamamos el set filter
+    const {filters, setFilter } = useFilters()
+    
+    //usamos useId para identificar los inputs unicamente
+    const minPriceFilterId = useId()
+    const categoryFilterId= useId()
+
+    //manejamos el valor que recibe el minPrice
     const handleChangePrice = (event) =>{
-        setMinPrice(event.target.value)
-        changeFilter(prevState => ({
+        setFilter(prevState => ({
             ...prevState,
             minPrice: event.target.value
         }))
     }
 
+    //manejamos el valor que recibe category
     const handleChangeCategory = (event) =>{
-        changeFilter(prevState => ({
+        setFilter(prevState => ({
             ...prevState,
             category: event.target.value
         }))
@@ -21,21 +30,22 @@ export function Filters({changeFilter}) {
     return (
         <section>
             <div>
-                <label htmlFor="price">Min price</label>
+                <label htmlFor={minPriceFilterId}>Min price</label>
                 <input
                     type="range"
-                    id="price"
+                    id={minPriceFilterId}
                     min="0"
                     max="2000"
                     onChange={handleChangePrice}
+                    value={filters.minPrice}
                 />
-                <span>${minPrice}</span>
+                <span>${filters.minPrice}</span>
             </div>
 
             <div>
-                <label htmlFor="category">Category</label>
+                <label htmlFor={categoryFilterId}>Category</label>
                 <select 
-                id="category"
+                id={categoryFilterId}
                 onChange={handleChangeCategory}
                 >
                     <option value="all">All</option>
