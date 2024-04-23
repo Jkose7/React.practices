@@ -14,7 +14,7 @@ Carrito:
 ✅ Eliminar los productos del carrito.
 ✅ Poder modificar la cantidad de productos del carrito.
 ✅ Sincroniza los cambios del carrito con la lista de productos.
-- Guarda en un localStorage el carrito para que se recupere al recargar la página. (da puntos)
+✅ Guarda en un localStorage el carrito para que se recupere al recargar la página. (da puntos)
 - Agregar paginacion
 - Consumir productos desde la API
 - Modificar Estilos
