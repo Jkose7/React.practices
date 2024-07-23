@@ -1,7 +1,8 @@
 # React Router Clone
 
-- [] Crear una forma de hacer SPAs
-- [] Poder navegar entre
+- [x] Crear una forma de hacer MPAs
+- [x] Crear una forma de hacer SPAs
+- [x] Poder navegar entre paginas
 - [] Crear componente Link para hacerlo declarativo 
 - [] Soportar ruta 404
 - [] Soportar rutas con parametros 
