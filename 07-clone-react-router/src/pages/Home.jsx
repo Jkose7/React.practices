@@ -1,10 +1,10 @@
-import { navigate } from "../components/Link"
+import { Link } from "../components/Link"
 
 export function Home() {
   return (
     <main>
       <h1>Home Page</h1>
-      <button onClick={() => navigate('/about')}>Go to about</button>
+      <Link to={'/about'}>Go to about</Link>
     </main>
   )
 }
