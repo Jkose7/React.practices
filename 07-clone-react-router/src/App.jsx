@@ -4,7 +4,19 @@ import { Home } from './pages/Home'
 import { About } from './pages/About'
 import './App.css'
 
-function App() {
+const routes = [
+  {
+    path: '/',
+    component: Home
+  },
+  {
+    path: '/about',
+    component: About
+  },
+]
+
+
+function Router({ routes = [], defaultComponent: DefaultComponent = () => null }) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
   useEffect(() => {
@@ -20,10 +32,16 @@ function App() {
     }
   }, [])
 
+  const Page = routes.find(({ path }) => path === currentPath)?.component
+  return Page ? <Page /> : <DefaultComponent />
+}
+
+function App() {
   return (
     <>
-      {currentPath === '/' && <Home />}
-      {currentPath === '/about' && <About />}
+      <Router
+        routes={routes}
+      />
     </>
   )
 }
